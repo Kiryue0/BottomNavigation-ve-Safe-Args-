@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activiy_nav"
+    app:startDestination="@id/birinciFragment">
+
+    <fragment
+        android:id="@+id/birinciFragment"
+        android:name="com.melih.bottomnavigationkullanimi.BirinciFragment"
+        android:label="fragment_birinci"
+        tools:layout="@layout/fragment_birinci" >
+        <action
+            android:id="@+id/ikincifragmentgecis"
+            app:destination="@id/ikincifragment">
+
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/ikincifragment"
+        android:name="com.melih.bottomnavigationkullanimi.Ikincifragment"
+        android:label="fragment_ikincifragment"
+        tools:layout="@layout/fragment_ikincifragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+</navigation>
